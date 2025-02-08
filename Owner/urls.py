@@ -9,7 +9,20 @@ urlpatterns = [
          TemplateView.as_view(
              template_name="owner/registration_complete.html"),
          name="registration-complete"),
+        
 
+]
+urlpatterns += [
+    path(
+        'dash/',
+         TemplateView.as_view(template_name="owner/dash/dashboard.html"),
+         name='dashboard'
+         ),
+    path(
+        'dash/edit/',
+        TemplateView.as_view(template_name="owner/dash/edit.html"),
+        name='edit'
+         )
 ]
 
 
